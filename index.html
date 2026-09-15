@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Test-Bot</title>
+</head>
+<body>
+
+<h1>Test-Bot</h1>
+
+<script>
+window.initEmbeddedMessaging = function() {
+    try {
+        embeddedservice_bootstrap.settings.language = 'de';
+
+        embeddedservice_bootstrap.init(
+            '00D0N000000jig0',
+            'Website_Bot',
+            'https://gsm-group.my.site.com/ESWWebsiteBot1788251136272',
+            {
+                scrt2URL: 'https://gsm-group.my.salesforce-scrt.com'
+            }
+        );
+    } catch (err) {
+        console.error(err);
+    }
+};
+</script>
+
+<script
+    src="https://gsm-group.my.site.com/ESWWebsiteBot1788251136272/assets/js/bootstrap.min.js"
+    onload="initEmbeddedMessaging()">
+</script>
+
+</body>
+</html>
